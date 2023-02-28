@@ -11,7 +11,7 @@ namespace AppSearchCep
         {
             InitializeComponent();
 
-            MainPage = new Inicial();
+            MainPage = new NavigationPage(new BairrosPorCidade());
         }
 
         protected override void OnStart()

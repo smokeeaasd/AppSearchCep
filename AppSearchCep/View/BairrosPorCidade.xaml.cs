@@ -10,11 +10,12 @@ using Xamarin.Forms.Xaml;
 namespace AppSearchCep.View
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Inicial : ContentPage
+    public partial class BairrosPorCidade : ContentPage
     {
-        public Inicial()
+        public BairrosPorCidade()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
         }
     }
 }
