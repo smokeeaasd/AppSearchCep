@@ -4,9 +4,9 @@ using System.Text;
 
 namespace AppSearchCep.Model
 {
-    public class Logradouro
+    public class Cep
     {
-        public string cep { get; set; }
+        public string CEP { get; set; }
         public string id_logradouro { get; set; }
         public string tipo { get; set; }
         public string descricao { get; set; }
