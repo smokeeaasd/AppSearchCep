@@ -1,7 +1,6 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using AppSearchCep.View;
 
 namespace AppSearchCep
 {
@@ -11,7 +10,7 @@ namespace AppSearchCep
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new BairrosPorCidade());
+            MainPage = new NavigationPage(new Views.Menu());
         }
 
         protected override void OnStart()
