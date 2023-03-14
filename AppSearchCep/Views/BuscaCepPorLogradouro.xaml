@@ -4,15 +4,20 @@
              x:Class="AppSearchCep.Views.BuscaCepPorLogradouro">
     <ContentPage.Content>
         <StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <SearchBar x:Name="txt_logradouro" Placeholder="Qual é a sua rua?"/>
+            <StackLayout Orientation="Horizontal" Spacing="0">
+                <SearchBar x:Name="txt_logradouro" Placeholder="Qual é a sua rua?"
+                           WidthRequest="275"/>
 
-                <Button Text="Buscar"/>
+                <Button Text="Buscar" Clicked="Button_Clicked" BackgroundColor="#076"
+                        WidthRequest="110" TextColor="#eee" FontAttributes="Bold" CornerRadius="10"
+                        Margin="2"/>
             </StackLayout>
+            
+            <ActivityIndicator x:Name="carregando" IsRunning="False"/>
 
-            <ListView x:Name="lst_Ceps">
+            <ListView x:Name="lst_ceps">
                 <ListView.Header>
-                    <Grid ColumnDefinitions="Auto, *, *, Auto" RowDefinitions="Auto">
+                    <Grid ColumnDefinitions="*, *, *, *" RowDefinitions="Auto">
                         <Label Grid.Row="0" Grid.Column="0"
                                Text="CEP"/>
 
@@ -34,7 +39,7 @@
                                        Text="{Binding CEP}"/>
 
                                 <Label Grid.Row="0" Grid.Column="1"
-                                       Text="{Binding descricao_logradouro}"/>
+                                       Text="{Binding descricao}"/>
 
                                 <Label Grid.Row="0" Grid.Column="2"
                                        Text="{Binding descricao_cidade}"/>
