@@ -5,39 +5,36 @@
     <ContentPage.Content>
         <StackLayout>
             <StackLayout Orientation="Horizontal">
-                <Picker WidthRequest="270"
-                    x:Name="pck_uf" Title="Selecione a UF">
+                <Picker x:Name="pck_uf"
+                        SelectedIndexChanged="pck_uf_SelectedIndexChanged"
+                        Title="Selecione o Estado">
                     <Picker.Items>
                         <x:String>SP</x:String>
-                        <x:String>RJ</x:String>
                         <x:String>MG</x:String>
                     </Picker.Items>
                 </Picker>
 
-                <Button Text="Buscar" Clicked="Button_Clicked" BackgroundColor="#076"
-                        WidthRequest="110" TextColor="#eee" FontAttributes="Bold" CornerRadius="10"
-                        Margin="2"/>
+                <Picker x:Name="pck_cidade"
+                        SelectedIndexChanged="pck_cidade_SelectedIndexChanged"
+                        ItemDisplayBinding="{Binding descricao}"
+                        Title="Selecione a Cidade">
+                </Picker>
             </StackLayout>
 
-            <ActivityIndicator x:Name="carregando" IsRunning="False" BackgroundColor="red"/>
-
-            <Picker x:Name="pck_cidades">
-            </Picker>
-            
-            <ListView x:Name="lst_ceps">
+            <ListView x:Name="lst_bairros">
                 <ListView.Header>
-                    <Label Grid.Row="0" Grid.Column="0"
-                               Text="Bairro"/>
+                    <Label Grid.Row="0" Grid.Column="0" Text="Bairros"/>
                 </ListView.Header>
+
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Label Grid.Row="0" Grid.Column="1"
-                                       Text="{Binding descricao_bairro}"/>
+                            <Label Grid.Row="0" Grid.Column="0" Text="{Binding descricao_bairro}"/>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
