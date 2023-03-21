@@ -10,7 +10,7 @@ namespace AppSearchCep
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new Views.BairrosPorCidade());
+            MainPage = new NavigationPage(new Views.Menu());
         }
 
         protected override void OnStart()
