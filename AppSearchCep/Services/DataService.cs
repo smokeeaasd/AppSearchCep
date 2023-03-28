@@ -10,13 +10,14 @@ namespace AppSearchCep.Services
 {
     public class DataService
     {
+        private const string address = "http://10.0.2.2:8000";
         public static async Task<Endereco> GetEnderecoByCep(string cep)
         {
             Endereco end;
 
             using (HttpClient client = new HttpClient())
             {
-                HttpResponseMessage response = await client.GetAsync("https://cep.metoda.com.br/endereco/by-cep?cep=" + cep);
+                HttpResponseMessage response = await client.GetAsync(address + "/endereco/by-cep?cep=" + cep);
 
                 if (response.IsSuccessStatusCode)
                 {
@@ -39,7 +40,7 @@ namespace AppSearchCep.Services
 
             using (HttpClient client = new HttpClient())
             {
-                HttpResponseMessage response = await client.GetAsync("https://cep.metoda.com.br/bairro/by-cidade?id_cidade=" + id_cidade);
+                HttpResponseMessage response = await client.GetAsync(address + "/bairro/by-cidade?id_cidade=" + id_cidade);
 
                 if (response.IsSuccessStatusCode)
                 {
@@ -62,7 +63,7 @@ namespace AppSearchCep.Services
 
             using (HttpClient client = new HttpClient())
             {
-                HttpResponseMessage response = await client.GetAsync("https://cep.metoda.com.br/logradouro/by-bairro?id_cidade=" + id_cidade + "&bairro=" + bairro);
+                HttpResponseMessage response = await client.GetAsync(address + "/logradouro/by-bairro?id_cidade=" + id_cidade + "&bairro=" + bairro);
 
                 if (response.IsSuccessStatusCode)
                 {
@@ -85,7 +86,7 @@ namespace AppSearchCep.Services
 
             using (HttpClient client = new HttpClient())
             {
-                HttpResponseMessage response = await client.GetAsync("https://cep.metoda.com.br/cep/by-logradouro?logradouro=" + logradouro);
+                HttpResponseMessage response = await client.GetAsync(address + "/cep/by-logradouro?logradouro=" + logradouro);
 
                 if (response.IsSuccessStatusCode)
                 {
@@ -108,7 +109,7 @@ namespace AppSearchCep.Services
 
             using (HttpClient client = new HttpClient())
             {
-                HttpResponseMessage response = await client.GetAsync("https://cep.metoda.com.br/cidade/by-uf?uf=" + uf);
+                HttpResponseMessage response = await client.GetAsync(address + "/cidade/by-uf?uf=" + uf);
 
                 if (response.IsSuccessStatusCode)
                 {
@@ -131,7 +132,7 @@ namespace AppSearchCep.Services
 
             using (HttpClient client = new HttpClient())
             {
-                HttpResponseMessage response = await client.GetAsync("https://cep.metoda.com.br/cep/by-logradouro?logradouro=" + logradouro);
+                HttpResponseMessage response = await client.GetAsync(address + "/cep/by-logradouro?logradouro=" + logradouro);
 
                 if (response.IsSuccessStatusCode)
                 {

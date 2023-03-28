@@ -17,13 +17,16 @@ namespace AppSearchCep.Views
         public BuscaCepPorLogradouro()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
         }
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
             try
             {
+                carregando.IsVisible = true;
                 carregando.IsRunning = true;
+
                 List<Cep> arr_ceps = await DataService.GetCepsByLogradouro(txt_logradouro.Text);
                 lst_ceps.ItemsSource = arr_ceps;
             }
@@ -33,6 +36,7 @@ namespace AppSearchCep.Views
             }
             finally
             {
+                carregando.IsVisible = false;
                 carregando.IsRunning = false;
             }
         }

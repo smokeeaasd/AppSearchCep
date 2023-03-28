@@ -15,6 +15,7 @@ namespace AppSearchCep.Views
         public Menu()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
         }
     }
 }

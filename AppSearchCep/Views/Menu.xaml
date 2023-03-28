@@ -13,7 +13,7 @@
                    Text="Api Busca Cep"/>
 
             <controls:PageButton Grid.Row="1" Grid.Column="0"
-                    Text="Endereço por Cep" TargetPage="{views:BuscaCepPorLogradouro}"/>
+                    Text="Endereço por Cep" TargetPage="{views:BuscaCepPorLogradouro}" BackgroundColor="#5142f5"/>
 
             <controls:PageButton Grid.Row="1" Grid.Column="1"
                     Text="Logradouro por Bairro" TargetPage="{views:BairrosPorCidade}"/>

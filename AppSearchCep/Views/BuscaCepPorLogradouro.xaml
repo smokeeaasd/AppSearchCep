@@ -8,13 +8,13 @@
                 <SearchBar x:Name="txt_logradouro" Placeholder="Qual é a sua rua?"
                            WidthRequest="275"/>
 
-                <Button Text="Buscar" Clicked="Button_Clicked" BackgroundColor="#076"
+                <Button Text="Buscar" Clicked="Button_Clicked" BackgroundColor="#5142f5"
                         WidthRequest="110" TextColor="#eee" FontAttributes="Bold" CornerRadius="10"
                         Margin="2"/>
             </StackLayout>
-            
-            <ActivityIndicator x:Name="carregando" IsRunning="False"/>
 
+            <ActivityIndicator x:Name="carregando" IsRunning="False" Color="#5142f5" IsVisible="false"/>
+            
             <ListView x:Name="lst_ceps">
                 <ListView.Header>
                     <Grid ColumnDefinitions="*, *, *, *" RowDefinitions="Auto">
@@ -31,6 +31,7 @@
                                Text="UF"/>
                     </Grid>
                 </ListView.Header>
+
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -51,6 +52,7 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
