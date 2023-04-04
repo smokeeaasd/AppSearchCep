@@ -13,7 +13,7 @@
                    Text="Api Busca Cep"/>
 
             <controls:PageButton Grid.Row="1" Grid.Column="0"
-                    Text="Endereço por Cep" TargetPage="{views:BuscaCepPorLogradouro}" BackgroundColor="#5142f5"/>
+                    Text="CepByLogradouro" TargetPage="{views:BuscaCepPorLogradouro}" BackgroundColor="#5142f5"/>
 
             <controls:PageButton Grid.Row="1" Grid.Column="1"
                     Text="Logradouro por Bairro" TargetPage="{views:BairrosPorCidade}"/>
@@ -22,10 +22,10 @@
                     Text="Cep por logradouro" TargetPage="{views:BairrosPorCidade}"/>
 
             <controls:PageButton Grid.Row="2" Grid.Column="1"
-                    Text="Cidade por UF" TargetPage="{views:BairrosPorCidade}"/>
+                    Text="CidadeByUF" TargetPage="{views:CidadePorEstado}" BackgroundColor="#5142f5"/>
 
-            <controls:PageButton Grid.Row="2" Grid.Column="1"
-                    Text="Bairro por Cidade" TargetPage="{views:BairrosPorCidade}"/>
+            <controls:PageButton Grid.Row="3" Grid.Column="0"
+                    Text="BairroByCidade" TargetPage="{views:BairrosPorCidade}" BackgroundColor="#5142f5"/>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

@@ -5,9 +5,6 @@ using Android.Content.PM;
 using Android.Runtime;
 using Android.OS;
 
-[assembly: UsesPermission(Android.Manifest.Permission.Internet)]
-[assembly: UsesPermission(Android.Manifest.Permission.AccessNetworkState)]
-
 namespace AppSearchCep.Droid
 {
     [Activity(Label = "AppSearchCep", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation | ConfigChanges.UiMode | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize )]

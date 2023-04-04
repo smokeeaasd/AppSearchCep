@@ -14,6 +14,7 @@ namespace AppSearchCep.Controls
         public PageButton()
         {
             Clicked += OnClicked;
+            this.TextTransform = TextTransform.None;
         }
 
         private void OnClicked(object sender, EventArgs e)
